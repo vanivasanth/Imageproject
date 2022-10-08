@@ -1,0 +1,89 @@
+
+.search_form{
+    margin-left: 100px;
+    margin-top: 40px;
+    color: dimgray;
+    width: 80vw;
+}
+.searchbox{
+    width: 80vw;
+    display: flex;
+}
+.search{
+     margin: 50px 0px ; 
+     margin-left: 200px;
+     padding: 0px;
+     display: flex;
+     float: left;
+     justify-content: end;
+     align-items: center;
+}
+.search p{
+    margin: 5px;
+    margin-top: 10px;
+}
+.search .searchiteminput{
+    width:400px;
+    margin-top:20px;
+    padding:10px;
+    border:1px solid rgb(48, 47, 47);
+    border-radius:2px;
+}
+
+.search .searchicon{
+    margin-top:20px;
+    padding: 3px;
+    color: rgb(65, 5, 121);
+    font-size: 20px;
+}
+.searchicon:hover
+{
+    box-shadow: 2px 2px 5px 5px #95f1f166;
+}
+.searchoptions{
+    display: flex;
+    margin: 20px;
+    margin-left: -60px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+.searchoptions input{
+    margin: 10px;
+    padding: 8px;
+}
+.searchoptions button{
+    margin: 15px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.searchitem{
+    float: left;
+}
+.searchitem button{   
+    margin-top:70px;
+    margin-left: 20px;
+    padding: 6px;
+    background-color: rgb(6, 69, 170);
+    color: white;
+    border: 1px solid rgb(5, 60, 180);
+    border-radius: 7px;
+    font-size: 20px;
+}
+
+.advsearch:hover{
+    border: 1px solid rgb(22, 73, 243);
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.searchtext{
+    width: 200px;
+}
+.buttons{
+    margin: 10px ;
+    margin-left: 10px;
+}

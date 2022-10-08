@@ -1,0 +1,76 @@
+.sidebar_modal{
+   display: block;
+    top: 10%;
+    left: 0;
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;
+    position: fixed;
+    background-color:rgba(0,0,0,0.4);
+    cursor: default;
+}
+
+
+.sidebar1_menu 
+{
+    position: fixed;
+    background: rgb(245, 246, 248);
+    height: 90vh;
+    width: 15vw;
+    font-size: 16px;
+    margin-left: 0;
+    padding: 0 10px;
+    font-weight:700;
+}
+.icons.uactive
+{
+    display:flex;
+    align-items: center;
+    justify-content: left;
+    padding: 10px;
+    cursor: pointer;
+}
+.icons.inactive
+{
+    display:flex;
+    align-items: center;
+    justify-content: left;
+    padding: 10px;
+    cursor: not-allowed;
+    color: grey;
+}
+.icons .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(75, 73, 73);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .icons.inactive:hover .tooltiptext {
+    margin-top: 35px;
+    margin-left: 20px;
+    visibility: visible;
+  }
+Link a{
+    text-decoration: none;
+}
+/* 
+.active
+{
+    margin-left: 50px;
+    margin-right: 0;
+    padding-right:10px ;
+    color:  #082f92;
+   text-decoration:underline;
+    cursor: pointer;
+    font-size: 1.3em;
+} */
+
+

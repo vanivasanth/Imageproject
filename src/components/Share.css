@@ -1,0 +1,41 @@
+.ShareWeb{
+    grid-area: main;
+    margin:150px 650px ;   
+    width: 400px;
+    height: 200px;
+    border: 2px solid #ddd;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 2px 3px 6px 6px #95f1f166;
+}
+.commentmodalBackground1
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99!important;
+    background-color:rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Sharecontents p
+{
+    font-size: 24px;
+    margin: 10px;
+    text-align: center;
+}
+.Sharebuttons
+{
+    display: flex;
+    justify-content: center;
+}
+.sbutton
+{
+    margin: 15px;
+    margin-top: 35px;
+    font-size: 28px;
+    cursor: pointer;
+}

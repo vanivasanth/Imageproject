@@ -1,0 +1,30 @@
+.Previewbg
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99!important;
+    background-color:rgba(0,0,0,0.02);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.PreviewModalContainer
+{
+    width: 70vw;
+    height: 70vh;
+    border-radius: 12px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.PreviewflexContainer
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

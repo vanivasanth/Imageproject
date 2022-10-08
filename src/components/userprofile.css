@@ -1,0 +1,230 @@
+.userprofile
+{
+    grid-area: main;
+    z-index: 99;
+    margin-top:0;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.profile_header
+{   
+    position: fixed;
+    top: 0;
+    background-color: #333333;
+    color: #ffffff;
+    width: 84%;
+    height: 10%;
+    overflow:hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+}
+
+.profile_header .flex-item
+{
+  padding: 10px;
+}
+
+.flex-item heading
+{
+  justify-content: space-between;
+  align-items: center;
+ 
+  font-size: 24px;
+  padding:15px;
+}
+.snap_updates
+{
+  margin-top: 100px;
+}
+.snap_updates h1
+{
+    margin-left: 30px;
+    color: rgb(95, 5, 88);
+    font-size: 18px;
+    z-index: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.menu_icon
+{
+  margin-left: 20px;
+  box-shadow: 0px 0px 3px 2px #95f1f166;
+  cursor: pointer;
+}
+
+.userprofile hr
+{
+    margin:20px;
+}
+
+
+.user_gallery
+{
+  width: 90%;
+  margin: 20px;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(5, 220px);
+  grid-template-rows: 270px;
+  gap:10px;   
+  z-index: 0;
+}
+
+
+.image-card
+{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+
+
+.viewbox1
+{
+  margin: 10px;
+  z-index: 98;
+  bottom: 0;
+  width: 70%;
+  height: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgba(0, 0, 0, 0.6); */
+}
+
+.viewbox1 img
+{
+  position: absolute;
+  object-fit: contain;
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+}
+.viewbox1_icons
+{
+  position: absolute;
+  left: 53%;
+  top: 11%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.profile-menu-trigger {
+    background: #ffffff;
+    border-radius: 90px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    border: none;
+    vertical-align: middle;
+    transition: box-shadow 0.4s ease;
+    margin-left: auto; /* Strictly for positioning */
+  }
+  
+  .profile-menu-trigger:hover {
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .profile-menu-trigger span {
+    font-weight: 700;
+    vertical-align: middle;
+    font-size: 14px;
+    margin: 0 10px;
+  }
+  
+  .profile-menu-trigger img {
+    border-radius: 90px;
+  }
+  
+  .profile-menu {
+    background: #ffffff;
+    border-radius: 8px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 250px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+  }
+  
+  .profile-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  .profile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .profile-menu li {
+    border-bottom: 1px solid #dddddd;
+    text-decoration: none;
+    color: #333333;
+    padding: 15px 20px;
+    display: block;
+    cursor: pointer;
+  }
+
+  .sharemodel{
+    background: #ffffff;
+    border-radius: 8px;
+    position: relative;
+    top: -5px;
+    left: 10px;
+    width: 250px;
+    padding: 10px;
+    background-color: #f5eef4;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+  }
+  .sharemodel.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+.sidebar_modal
+{
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color:rgba(0,0,0,0.4);;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.internet-error {
+  height: 60px;
+  background: #ff8100;
+  margin-top: 100px;
+  font-size: 20px;
+}
+
+.internet-error p {
+  font-size: 25px;
+  line-height: 60px;
+  color: #fff;
+  padding-left: 50px;
+  margin: 0;
+}

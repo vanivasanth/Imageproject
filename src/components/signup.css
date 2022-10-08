@@ -1,0 +1,157 @@
+.signup
+{  
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center; 
+}
+
+.signup-left
+{
+  float: left;
+  width: 60%;
+  height: 100vh;
+}
+
+.signup-right
+{
+  float: left;
+  width: 40%;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(242, 244, 245);
+}
+
+
+.back-button
+{
+  color: rgb(24, 129, 129);
+  display: flex;
+  padding: 5px;
+  margin: 5px;
+  border:1px solid rgb(2, 70, 70);
+  border-radius: 10px;
+  width: 8%;
+  cursor: pointer;
+}
+
+.back-button ArrowBackIcon
+{
+  margin-left:30px;
+}
+
+.signup_form_title
+{
+  text-align: center;  
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.signup_form_container
+{
+  
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px solid rgb(242, 244, 245);
+}
+
+.signup_form_fields input
+{
+  padding: 10px;
+  margin: 20px 8px;
+  width: 80%;
+}
+
+.signup_form_fields button
+{
+  padding:10px 8px;
+  width: 30%;
+  margin: 8px 8px;
+}
+
+select{
+  width: 50%;
+  margin: 8px 8px;
+}
+.steptwo_form_fields input
+{
+  padding:10px 8px;
+  width: 40%;
+  margin: 8px 8px;
+}
+.img-holder
+{
+  width: 230px;
+  height: 230px;
+  margin:auto;
+}
+
+.img-holder img
+{ 
+  width: 230px;
+  height: 230px;
+  object-fit: contain;
+}
+#input[type="file"] {
+	display: none;
+}
+.label{
+  width: 100%;
+ 
+  display: flex;
+  justify-content: center;
+}
+.image-upload{
+  margin: auto;
+  width: 200px;
+	height: 50px;
+  color: white;
+  border-radius: 10px;
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+}
+.signup_form_submit button
+{
+  width: 30%;
+  margin: auto;
+  margin-top: 20px;
+  padding: 15px; 
+  font-size: 1.2em;
+  background-color: white;
+  color: rgb(78, 146, 248);
+  border:1px solid rgb(98, 155, 240);
+
+  border-radius: 10px;
+}
+
+.signup_form_submit button:hover
+{
+  padding: 20px;
+}
+
+
+.sign-in
+{
+    margin: 15px 0;
+    color: #0f254d;
+    font-size: 18px;
+}
+
+.sign-in p{
+    color: #3498db;
+    text-decoration: none;
+    padding-top:20px ;
+}
+
+.sign-in:hover p
+{
+    text-decoration: none;
+    color: #034eda;
+    cursor: pointer;
+}

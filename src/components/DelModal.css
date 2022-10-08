@@ -1,0 +1,76 @@
+.delmodalBackground 
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    background-color:rgba(0,0,0,0.4);;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .delmodalContainer {
+    width: 430px;
+    height: 500px;
+    border-radius: 12px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 25px;
+  }
+  .close_icon
+  {
+      color: black;
+      margin-left: 340px;
+      padding: 3px 10px;
+  }
+  .modalContainer .title 
+  {
+    text-align: center;
+  }
+.del-content p {
+  color: black;
+  margin-left:40px;
+  padding:20px;
+  font-size:1.3em;
+}
+  .del-button
+  {
+    width: 150px;
+    height: 45px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    margin: 18px;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .preview-holder
+  {
+  width: 320px;
+  height: 230px;
+  margin:auto;
+  }
+
+  .preview-holder img
+  { 
+    width: 320px;
+    height: 230px;
+    object-fit: cover;
+  }
+  .del-button:hover{
+    border: 2px solid blue;
+  }
+
+  .close_icon:hover{
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+  }

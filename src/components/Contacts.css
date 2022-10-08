@@ -1,0 +1,23 @@
+.Contactscontainer
+{
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:100px;
+}
+
+.contact-image-card
+{
+   display: flex;
+   flex-direction: column; 
+   flex:0 0 350px;
+   border: 1px solid rgb(224, 220, 220);
+   margin: 10px;
+   height: 400px;
+}
+
+.contact-image-card img
+{
+  object-fit: cover;
+  height: 300px;
+}

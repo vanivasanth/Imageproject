@@ -1,0 +1,258 @@
+
+.modalBackground 
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    background-color:rgba(0,0,0,0.4);;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalContainer
+   {
+    width: 800px;
+    height: 600px;
+    border-radius: 12px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;   
+    padding: 10px;
+  }
+  
+  .modalContainer2{
+    grid-area: main;
+    float: left;
+    margin-left: 60px;
+    margin-top:0;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 600px;
+
+  }
+
+  .previewContainer
+  {
+    grid-area: main;
+   
+    margin-left:700px;
+    min-height: 600px;
+    background-color: rgb(249, 235, 217);
+    width: 300px;
+  }
+  .previewcard
+  {
+    border-radius: 4px;
+    border: 1px solid lightgray;
+    margin-bottom: 15px;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    object-fit: cover;
+  }
+  .previewcard img {
+    object-fit: contain;
+  }
+  .modalContainer2 .title 
+  {
+    text-align: center;
+  }
+  
+  .titleCloseBtn 
+  {
+    margin-top: 5px;
+    display: flex;
+    text-align: right;
+  }
+  
+  .titleCloseBtn button 
+   {
+      align-items: flex-end;
+      justify-content: flex-end;
+      background-color: transparent;
+      border: none;
+      font-size: 25px;
+      cursor: pointer;   
+   }
+  .titleCloseBtn button:hover 
+   {
+     background-color: blue;
+     color: white;
+     cursor: pointer;
+   }
+  .modal_form_fields
+   {
+     justify-content: center;
+     align-items: center;
+   }
+ .modal_form_fields input
+  {
+    padding: 10px;
+    margin: 8px;
+    margin-left: 30px;
+    margin-top: 15px;
+    margin-bottom:8px ;
+    background-color: none;
+    border:1px solid lightgray;  
+    border-radius: 10px;
+    width: 90%;
+  }
+
+ .modal_form_fields textarea
+ {
+    padding: 8px;
+    margin: 10px;
+   margin-left: 0;
+    background-color: none;
+    border:1px solid lightgray;
+    width: 100%;
+    border-radius: 1px;
+ }
+
+.field_parallel
+ {
+  display: flex;
+ }
+
+.css-2b097c-container
+{
+  width: 620px;
+}
+
+.imagesection
+{
+  display: flex;
+}
+
+ .leftside
+ {
+   margin-top: 5px;
+   float: left;
+ } 
+ 
+ .rightside
+  {
+   float: left;
+   margin-left: 10px;
+   
+   margin-top: 10px;
+   width: 600px;
+  }
+ .mode-radio-btn
+  {
+    margin: 20px 5px;
+    margin-top: 10px;
+    padding:5px ;
+  }
+
+ .mode-radio-btn input
+  {
+    margin:5px;
+    margin-top: 10px;
+    padding: 0;
+    width:8%;
+  }
+  .cmt-img1 img
+   {
+     width: 240px;
+     height: 160px;
+     border: 1px solid grey;
+     float: left;
+     margin-left: 30px;
+   }
+ .mode-btn1
+  {
+    width: 200px;
+    height: 35px;
+    background-color: white;
+    color: rgb(81, 105, 238);
+    margin: 12px;
+    margin-left:10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .comment-btn1
+   {
+    width: 300px;
+    height: 45px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    margin-left:180px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+   }
+
+.uploadFormContainer
+{
+  background: linear-gradient(45deg, rgb(238, 238, 224), rgb(225, 86, 178), rgb(241, 13, 112));
+  position: absolute;
+  right: 0;
+  left: 250px;
+  top: 0;
+  bottom: 0;
+  width: 70%;
+  border: 1px solid black;
+}
+.flex-Item
+{
+  margin:10px;
+  padding: 5px;
+}
+
+.Title
+{
+  
+  align-self: center;
+}
+.ImageContainer
+{
+  background-color: bisque;
+}
+
+.imgflex-Item img
+{
+  width: 200px;
+}
+
+
+@media screen and (max-width: 580px) {
+  .uploadFormContainer
+{
+  background: linear-gradient(45deg, rgb(238, 238, 224), rgb(225, 86, 178), rgb(241, 13, 112));
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 70%;
+  border: 1px solid black;
+}
+  
+}
+
+.css-2b097c-container {
+  
+  margin-top: 10px;
+  height:60px;
+  width: 476px;
+}
+
+.css-yk16xz-control {
+height: 50px;
+}

@@ -1,0 +1,126 @@
+.commentmodalBackground
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99!important;
+    background-color:rgba(0,0,0,0.02);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.commentmodalContainer
+{
+    width: 96vw;
+    height: 98vh;
+    border-radius: 12px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.commentmodalContainer h2
+{
+   text-align: center;
+}
+
+.comment-close_icon
+{
+    color: black;
+    margin-left:92vw;
+    margin-top: 10px;
+    padding: 3px 10px;
+    cursor: pointer;
+}
+
+.comment-preview-holder
+{
+    width: 120px;
+    height: 100px;
+    display: flex;
+}
+
+.comment-preview-holder img
+{
+    margin-left: 10px;
+    width:100px;
+    height:80px;
+    object-fit: cover;
+    float: left;
+}
+.comment-preview-holder-title
+{
+    margin-left: 10px;
+    width: 80px;
+    height: 60px;
+}
+.comment-preview-holder-title img
+{
+    margin-left: 20px;
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+}
+.instruction
+{
+    float: left;
+    color: rgb(240, 69, 69);
+    font-size: 24px;
+    margin:40px 50px 30px 20px;
+}
+.cmt-img-holder
+{
+    width: 120px;
+    height: 100px;
+}
+
+
+.cmt-img img
+{
+    width: 120px;
+    height: 100px;
+    float: left;
+}
+
+.add-comment
+{
+    border: 1px solid grey;
+    height: 40px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    float: left;
+}
+
+.addicon
+{
+  padding: 5px;
+  padding-top: 0;
+  font-size: 32px;
+}
+
+.addicon .tooltiptext1 {
+    visibility: hidden;
+    width: 90px;
+    background-color: rgb(253, 237, 237);
+    color: rgb(48, 46, 46);
+    text-align: center;
+    border-radius: 6px;
+    padding: 2px 0;
+    font-size: 15px;
+    border:1px solid black;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+
+  .addicon:hover .tooltiptext1{
+    margin-left: 20px;
+    margin-top: 20px;
+    visibility: visible;
+  }

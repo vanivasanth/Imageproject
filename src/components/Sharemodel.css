@@ -1,0 +1,26 @@
+.linkContainer
+{
+   margin:10px 300px 10px 10px; 
+   display: flex;
+   background-color:rgb(239, 239, 239);
+   border: 1px solid rgb(118, 118, 118);
+   border-radius: 10px;
+   padding: 8px;
+}
+
+.linkContent
+{
+    cursor: default;
+    margin-top: 3px;
+    font-size: 20px;
+    flex: 1;
+}
+.linkButton button
+{
+    align-self: flex-end;
+    cursor: pointer;
+    border:none; 
+}
+.sharebuttons{
+    display: flex;
+}
