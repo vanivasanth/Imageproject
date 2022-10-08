@@ -26,25 +26,36 @@ export function MultiShareContextProvider(props) {
     const[shareText, setshareText]=useState('');
     const[shareuser, setshareuser]=useState('');
     const [ctxversionno, setctxversion]= useState('');
-    function sharetitlehandler(title) {
+
+    function sharetitlehandler(title) 
+    {
       setsharetitle(title);
       console.log(sharetitle);
     }
-    function shareuserhandler(shareuser1){
+
+    function shareuserhandler(shareuser1)
+    {
       setshareuser(shareuser1);
       console.log(shareuser)
     }
-   function shareurlHandler(shareLink){
+
+   function shareurlHandler(shareLink)
+   {
     setShareurl(shareLink);
     console.log(shareLink);
    }
-   function setctxversionno(vno){
+
+   function setctxversionno(vno)
+   {
     setctxversion(vno)
    }
-   function sharetexthandler(texttoshare){
+
+   function sharetexthandler(texttoshare)
+   {
     setshareText(texttoshare);
     console.log(shareText)
    }
+   
     function addToMultiShareHandler(shareImages)
     {
       const checkexistence=filenames.includes(shareImages);;

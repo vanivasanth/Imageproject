@@ -1,142 +1,72 @@
-//import { useState } from 'react';
-import Sidebar from './components/Sidebar';
-import Header from './components/Header';
-
-import Signup from './components/Signup';
-import Userprofile from './components/Userprofile';
-import Notification from './components/Notification';
-import Settings from './components/Settings';
-import Search from './components/Search';
-import Modal from "./components/Imageupload";
-//import Modal1 from './components/imageupload2';
-import Allsnaps from './components/Allsnaps';
-import Multisharecart from './components/Multisharecart';
-import Contacts from './components/Contacts';
-//import Bookmarks from './components/Bookmarks';
-import Favourites from './components/Favourites';
-//import Starred from './components/Starred';
-import Likes from './components/Likes';
-import Share from './components/Share';
-import Home from './components/Home';
-import Viewsharedimages from './components/Viewsharedimages';
-import { Route, Redirect,withRouter, Switch } from 'react-router-dom';
-//import { useEffect } from 'react';
-import Toastcreate from './components/Toastcreate';
-import Editprofile from './components/Editprofile';
-import Logout from './components/Logout';
-import NotFound from './components/NotFound';
-import Forgot from './components/ForgotPassword';
-import Allusersearch from './components/Allusersearch';
-//import { useState, useEffect } from 'react';
+import {
+  Box
+} from "@mui/material";
+import React from "react";
+import Home from "./components/pages/Home";
+import Registerandsigin from "./components/forms/Register-Sigin";
+import Contacts from "./components/pages/Contacts";
+import Prescription from "./components/pages/Prescription";
+import Likes from "./components/pages/Likes";
+import Favourites from "./components/pages/Favourites";
+import Myuploads from "./components/pages/Myuploads";
+import Imageupload from "./components/forms/ImageUpload";
+import Multisharecart from "./components/pages/Multisharecart";
+import Search from "./components/forms/Search";
+import Share from "./components/pages/Share";
+import Notfound from "./components/pages/Notfound";
+import Logout from "./components/pages/Logout";
+import Navbar from './components/layouts/Navbar';
+import AdvSearchResults from "./components/pages/AdvSearchres";
+import SearchResults from "./components/pages/SearchResults";
+import Viewmultishare from "./components/pages/Viewmultishare";
+import Editprofile from './components/forms/Editprofile';
+import Access from "./components/pages/Access";
+import { Route, Routes} from 'react-router-dom';
+import { useSelector } from "react-redux";
 import './App.css';
-//import { toast, cssTransition } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
-const App= ({location}) => {
-
-  
-
-const token=localStorage.getItem('auth_token');
-
- // const[navbarOpen, setNavbarOpen] = useState(false);
- // const[sidebarOpen, setSidebarOpen] = useState(false);
-
-  
-  // const navbarHandler = () => {
-  //   setNavbarOpen(true);
-  //   setSidebarOpen(true);
-  // }
-
-  // const sidebarHandler=() => {
-  //   setSidebarOpen(false);
-  // }
-
+function App() { 
+ 
+  const loggedstatus=useSelector((state)=>state.auth.isLoggedIn);
+ 
   return (
-    
-    <div className="App container"> 
-
-      {/* <Header/>   
-       <Sidebar/> */}
-      {
-        // location.pathname !== '/Login' && 
-        // location.pathname !== '/Userprofile'&&
-        // location.pathname !== '/Signup' && 
-        // location.pathname !== '/Favourites' &&
-        location.pathname === '/' &&  (<Header/>)
-      }     
-      {
-        location.pathname !== '/Login' &&
-        location.pathname !== '/getSharedFiles/:referenceNumber' &&
-        location.pathname !== '/Signup' && (<Sidebar/>) }  
+    <div className="App">
    
-   <Switch>
-     
-     <Route exact path='/'>
-        {  token!== null? <Redirect to="/Allsnaps"/>:<Home/> }
+           <Box sx={{ display: 'flex' }}>
+             <Navbar/>      
+             <Box component="main" sx={{ flexGrow: 1, p: 3 ,marginTop:'60px'}}>
+             <Routes>
+                <Route exact path='/' element={<Home/>}/> 
+                <Route path='/registerandsignin'  element={<Registerandsigin/>}/>
+                <Route path='/contacts' element={loggedstatus?<Contacts/>:<Access/>}/>
+                <Route path='/prescription' element={loggedstatus?<Prescription/>:<Access/>}/>
+                <Route path='/likes' element={loggedstatus?<Likes/>:<Access/>}/>
+                <Route path='/favourites' element={loggedstatus?<Favourites/>:<Access/>}/>
+                <Route path='/myuploads' element={loggedstatus?<Myuploads/>:<Access/>}/>
+                <Route path='/Imageupload' element={loggedstatus?<Imageupload/>:<Access/>}/>
+                <Route path='/multishare' element={loggedstatus?<Multisharecart/>:<Access/>}/>
+                <Route path='/search' element={<Search/>}/>
+                <Route path='/share' element={<Share/>}/>
+                <Route path='/searchres' element={<SearchResults/>}/>
+                <Route path='/advsearchres' element={<AdvSearchResults/>}/>
+                <Route path='/getSharedFiles/:referenceNumber' element={<Viewmultishare/>}/>
+                <Route path='/editprofile' element={<Editprofile/>}/> 
+               
+                <Route path='/logout'  element={<Logout/>}/>
+                <Route path='*'  element={<Notfound/>}/>
           
-      </Route>
-     
-     <Route path='/Logout'>
-       <Logout/>
-     </Route>
-     <Route path='/Signup'>
-       <Signup/>
-     </Route>
-     <Route path='/upload'>
-       <Modal/>
-     </Route>
-     <Route path='/Allsnaps'>
-       <Allsnaps/>
-     </Route>
-     <Route path="/MyUploads" exact>
-         <Userprofile/>
-     </Route>         
-     <Route path='/Likes' exact>
-         <Likes/>
-     </Route>
-     <Route path='/Favourites'>
-         <Favourites/>
-     </Route>
-     <Route path='/Contacts'>
-        <Contacts/>
-     </Route>
-     <Route path='/Search'>
-        <Search/>
-     </Route>
-     <Route path='/Multisharecart'>
-        <Multisharecart/>
-     </Route>
-     <Route path='/Share'>
-        <Share/>
-     </Route>
-     <Route path='/Toastcreate'>
-        <Toastcreate/>
-     </Route>
-     <Route path='/Forgot'>
-        <Forgot/>
-     </Route>
-     <Route path='/Editprofile'>
-         <Editprofile/>
-     </Route>
-     <Route path='/Notifications'>
-        <Notification/>
-     </Route>
+     {/* 
+    
      <Route path='/getSharedFiles/:referenceNumber'>
        <Viewsharedimages/>
      </Route>
-     <Route path='/Settings'>
-        <Settings/>
-     </Route>
-     <Route path='/AlluserSearch'>
-        <Allusersearch/>
-     </Route>
-     <Route path='*'>
-        <NotFound/>
-     </Route>
-   </Switch>   
+    */}
+             </Routes>        
+          </Box>
+         </Box>
+          
     </div>
-  
   );
 }
 
-export default withRouter(App);
+export default App;

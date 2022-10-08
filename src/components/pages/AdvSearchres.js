@@ -1,0 +1,126 @@
+import React, { useState,useEffect, useRef,useContext } from "react";
+import ViewImage from "../ui/ViewImage";
+import Imagecard from "../ui/Imagecard";
+
+import { useSelector,useDispatch} from "react-redux";
+import {
+  Box,
+  Stack,
+  Typography,
+  CircularProgress,
+  Container,
+  Grid
+ } from '@mui/material'; 
+ import { fetchAdvSearchImages } from "../../store/GetAdvSearch";
+import { ImgarrayContext } from "../../context/ImgArrCtx";
+
+const AdvSearchResults =() =>
+ {  
+  const dispatch=useDispatch();
+  const ImageCtx = useContext(ImgarrayContext);  
+  const shouldrender=useRef(true);
+  const AdvSearchImages=useSelector((state)=>state.getAdvSearchImages);   
+  const Imagedata=AdvSearchImages.AdvsearchArray;  
+  console.log(Imagedata);
+  const [Imageinview, setImageinview]=useState(false);
+  const query=ImageCtx.searchtext;
+  useEffect(()=>
+  {
+    if(shouldrender.current)
+     {
+       shouldrender.current=false;
+       dispatch(fetchAdvSearchImages(query));
+     }     
+    },
+    [dispatch])
+  
+  const viewImage=(index) =>
+   {    
+     ImageCtx.setImagesarray(Imagedata);
+     ImageCtx.setcurrentindex(index);
+     ImageCtx.setsinglefilename(Imagedata[index].fileName);
+     ImageCtx.setcommentsforfname(Imagedata[index].fileName);
+     setImageinview(true);  
+   }
+
+  const setcloseview=()=>
+   {
+     setImageinview(false);
+   }
+
+    return(
+      <>
+       <Stack direction="row"
+               justifyContent="flex-start"
+               alignItems="center"
+               sx={{padding:'10px', 
+                    marginBottom:'10px', 
+                    position:'fixed',
+                    zIndex:'2',
+                    width:'100%',
+                    backgroundColor:'#f0f4fa'}}
+               spacing={2}>
+            <Box sx={{display:'flex', 
+                      justifyContent:'space-between',
+                      color:'#0c35ed'}}>
+             
+            <Typography>
+              Search Results
+            </Typography>
+               </Box>       
+        </Stack>
+
+        { Imageinview && <ViewImage setview={setcloseview}/>}
+
+          <Container>             
+              {AdvSearchImages.loading &&
+                   <Box sx={{width:'70vw',
+                             height:'30vw',
+                             display: 'flex',
+                             justifyContent:'center',
+                             alignItems:'center'}}>
+                            <CircularProgress />
+                   </Box>
+               }
+               {!AdvSearchImages.loading && 
+                 AdvSearchImages.error? 
+                 <Box sx={{width:'70vw',
+                           height:'30vw',
+                           display: 'flex',
+                           justifyContent:'center',
+                           alignItems:'center'}}>       
+                       {AdvSearchImages.error}
+                 </Box>:' '}
+               {!Imageinview && 
+                !AdvSearchImages.loading && 
+                 Imagedata.length!==0 &&
+                 <Grid container spacing={1} sx={{position:'relative', marginTop:'5%'}}>
+                  {
+                     Object.keys(Imagedata).map((key, index) => 
+                      {                 
+                        return(
+                             <Grid item key={Imagedata[key].fileName} xs={12} sm={6} md={4} lg={3}>
+                                <Imagecard image={Imagedata[key].fileName}
+                                           typechk={Imagedata[key].multiChatFiles}
+                                           cindex={index}
+                                           expandimage={viewImage} />
+                             </Grid>
+                             )})}
+                 </Grid>}
+               {!Imageinview && 
+                !AdvSearchImages.loading && 
+                 Imagedata.length===0 &&
+                 <Box sx={{width:'70vw',
+                           height:'30vw',
+                           display: 'flex',
+                           justifyContent:'center',
+                           alignItems:'center'}}>
+                                  No images found
+                 </Box>
+               }      
+          </Container>
+      </>     
+    );
+} 
+
+export default AdvSearchResults;
